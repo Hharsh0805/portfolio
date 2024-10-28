@@ -1,0 +1,22 @@
+/* Header.css */
+
+.logo {
+  width: 50px; /* Set the desired width */
+  height: 50px; /* Set the desired height */
+  border-radius: 50%; /* Make it circular */
+}
+
+nav ul li a {
+  position: relative; /* Needed for the hover effect */
+  text-decoration: none; /* Remove underline */
+}
+
+nav ul li a:hover {
+  color: #2c5282; /* Change text color on hover */
+}
+
+/* Active link style */
+nav ul li a.active {
+  color: #2b6cb0; /* Different color for active link */
+  font-weight: bold; /* Bold for emphasis */
+}

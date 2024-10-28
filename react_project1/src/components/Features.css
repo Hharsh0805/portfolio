@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+.features {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 130px;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.features-section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.third {
+    margin-top: 20px;
+}
+
+.features-section:hover {
+    background: rgb(231, 223, 223);
+}
+
+.features h1 {
+    margin-top: 20px;
+    text-align: left;
+    margin-left: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.features-image {
+    flex: 0.5;
+    padding-right: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.features-image img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.features-image:hover {
+    height: auto;
+    transform: scale(1.05);
+}
+
+.features-content {
+    flex: 3;
+}
+
+.features-content a {
+    text-decoration: none;
+    color: rgb(7, 190, 7);
+    font-weight: bold;
+}
+
+.features-content h2 {
+    font-size: 1.75rem;
+    color: #000000;
+}
+
+.read-more-link:hover {
+    color: blue;
+}
+
+.features-content p {
+    font-size: 1rem;
+    color: #3d3838;
+}
+
+@media (min-width: 768px) {
+    .features-section {
+        flex-direction: row;
+    }
+
+    .features-image {
+        padding-right: 20px;
+    }
+
+    .features-content h2 {
+        font-size: 2rem;
+    }
+
+    .features-content p {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .features {
+        margin: 0;
+        align-items: center;
+    }
+
+    .features-section {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .features-image img {
+        max-width: 300px;
+        width: 100%;
+    }
+
+    .features-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .features-content p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .features-section {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .features-image img {
+        max-width: 250px;
+        width: 100%;
+    }
+
+    .features-content h2 {
+        font-size: 1.25rem;
+    }
+
+    .features-content p {
+        font-size: 0.875rem;
+    }
+
+    .features-section:hover {
+        transform: scale(1);
+    }
+}
