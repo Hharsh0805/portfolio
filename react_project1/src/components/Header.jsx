@@ -59,7 +59,7 @@ export default function Header() {
           <div className="hidden md:block">
             <a
               href="/contact"
-              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+              className="bg-blue-500 hover:bg-black-600 text-white font-bold py-2 px-4 rounded"
             >
               Let's Talk
             </a>

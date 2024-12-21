@@ -1,126 +1,125 @@
 /* Carousel Section */
 .carousel {
-    margin-top: 40px;
-    background: linear-gradient(to right, #cfb3b3, #c4a7d1);
-    color: black;
-    height: auto; /* Change to auto for responsiveness */
-    padding: 20px; /* Add padding for mobile */
-  }
-  
+  margin-top: 40px;
+  background: linear-gradient(to right, #cfb3b3, #c4a7d1);
+  color: black;
+  height: auto; /* Change to auto for responsiveness */
+  padding: 20px; /* Add padding for mobile */
+}
+
+.carousel-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-btn {
+  margin-right: 20px;
+  padding: 0.5rem 1rem;
+  background-color: #0a19e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-button {
+  margin-top: 30px;
+}
+
+.carousel-btn:hover {
+  background-color: #ffffff;
+  color: #0a19e2;
+}
+
+.slide-text {
+  flex: 1;
+  padding: 2rem;
+  text-align: left;
+  margin-left: 100px;
+}
+
+.slide-text h1 {
+  font-size: 2.5rem;
+}
+
+.slide-text p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.slide-image {
+  flex: 2;
+  display: flex; /* Added flex for centering image */
+  justify-content: center; /* Center image */
+}
+
+.slide-image img {
+  margin-top: 40px;
+  height: auto; /* Responsive height */
+  max-width: 100%; /* Responsive width */
+  border: white solid 2px;
+  border-radius: 50%;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px; /* Adjusted for better visibility */
+}
+
+.next {
+  right: 10px; /* Adjusted for better visibility */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
   .carousel-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Allow wrapping on small screens */
-    transition: opacity 1s ease-in-out;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items */
   }
-  
-  .carousel-btn {
-    margin-right: 20px;
-    padding: 0.5rem 1rem;
-    background-color: #0a19e2;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .carousel-button {
-    margin-top: 30px;
-  }
-  
-  .carousel-btn:hover {
-    background-color: #ffffff;
-    color: #0a19e2;
-  }
-  
+
   .slide-text {
-    flex: 1;
-    padding: 2rem;
-    text-align: left;
-    margin-left: 100px;
+    margin-left: 0; /* Remove margin on smaller screens */
+    padding: 1rem; /* Add padding */
+    text-align: center; /* Center text */
   }
-  
+
   .slide-text h1 {
-    font-size: 2.5rem;
+    font-size: 2rem; /* Smaller font size */
   }
-  
+
   .slide-text p {
-    font-size: 1.2rem;
-    margin: 1rem 0;
+    font-size: 1rem; /* Smaller paragraph font size */
   }
-  
+
   .slide-image {
-    flex: 2;
-    display: flex; /* Added flex for centering image */
-    justify-content: center; /* Center image */
+    width: 100%; /* Full width on mobile */
   }
-  
+
   .slide-image img {
-    margin-top: 40px;
-    height: auto; /* Responsive height */
-    max-width: 100%; /* Responsive width */
-    border: white solid 2px;
-    border-radius: 50%;
+    width: 80%; /* Responsive image width */
+    height: auto; /* Maintain aspect ratio */
   }
-  
+}
+
+@media (max-width: 480px) {
   .prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    padding: 1rem;
-    cursor: pointer;
+    padding: 0.5rem; /* Smaller buttons */
   }
-  
-  .prev {
-    left: 10px; /* Adjusted for better visibility */
+
+  .carousel-btn {
+    padding: 0.4rem 0.8rem; /* Smaller button padding */
   }
-  
-  .next {
-    right: 10px; /* Adjusted for better visibility */
-  }
-  
-  /* Media Queries for Responsiveness */
-  @media (max-width: 768px) {
-    .carousel-content {
-      flex-direction: column; /* Stack elements vertically */
-      align-items: center; /* Center items */
-    }
-  
-    .slide-text {
-      margin-left: 0; /* Remove margin on smaller screens */
-      padding: 1rem; /* Add padding */
-      text-align: center; /* Center text */
-    }
-  
-    .slide-text h1 {
-      font-size: 2rem; /* Smaller font size */
-    }
-  
-    .slide-text p {
-      font-size: 1rem; /* Smaller paragraph font size */
-    }
-  
-    .slide-image {
-      width: 100%; /* Full width on mobile */
-    }
-  
-    .slide-image img {
-      width: 80%; /* Responsive image width */
-      height: auto; /* Maintain aspect ratio */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .prev, .next {
-      padding: 0.5rem; /* Smaller buttons */
-    }
-  
-    .carousel-btn {
-      padding: 0.4rem 0.8rem; /* Smaller button padding */
-    }
-  }
-  
+}

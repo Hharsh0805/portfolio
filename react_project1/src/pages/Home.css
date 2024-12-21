@@ -1,0 +1,24 @@
+.App {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Carousel styles are already defined in Carousel.css */
+  
+  /* Features styles are already defined in Features.css */
+  
+  /* RecentPosts styles are already defined in RecentPosts.css */
+  
+  /* Add any additional styles specific to the Home page here */
+  .home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .home-container {
+      padding: 1rem;
+    }
+  }
+  
+  

@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Carousel.css';
+
 const Carousel = ({ slides, currentSlide, nextSlide, prevSlide }) => {
   useEffect(() => {
     const interval = setInterval(() => {
@@ -15,17 +17,11 @@ const Carousel = ({ slides, currentSlide, nextSlide, prevSlide }) => {
           <h1>{slides[currentSlide].textHeading}</h1>
           <p>{slides[currentSlide].description}</p>
           <div className="carousel-button">
-            {slides[currentSlide].buttons ? (
-              slides[currentSlide].buttons.map((button, index) => (
-                <a key={index} href={button.link} className="carousel-btn">
-                  {button.text}
-                </a>
-              ))
-            ) : (
-              <a href={slides[currentSlide].buttonLink} className="carousel-btn">
-                {slides[currentSlide].buttonText}
-              </a>
-            )}
+            {slides[currentSlide].buttons.map((button, index) => (
+              <Link key={index} to={button.link} className="carousel-btn">
+                {button.text}
+              </Link>
+            ))}
           </div>
         </div>
         <div className="slide-image">
@@ -39,3 +35,4 @@ const Carousel = ({ slides, currentSlide, nextSlide, prevSlide }) => {
 };
 
 export default Carousel;
+
